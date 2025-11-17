@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar d-flex flex-column">
+            <h5 class="text-white px-3 mb-4">Dashboard Kit</h5>
+
+            <a href="#">Overview</a>
+            <a href="#">Tickets</a>
+            <a href="#">Ideas</a>
+            <a href="#">Contacts</a>
+            <a href="#">Agents</a>
+            <a href="#">Articles</a>
+
+            <hr class="text-secondary" />
+
+            <a href="#">Settings</a>
+            <a href="#">Subscription</a>
+        </nav>
+
+        <!-- Main content -->
+        <div class="flex-grow-1 p-4">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3>Overview</h3>
+                <div class="d-flex align-items-center gap-3">
+                    <img src="assets/images/search.png" width="16px" alt="">
+                    <img src="assets/images/new.png" width="16px" alt="">
+                    <p id="my_name">Erik Platonov</p>
+                    <img src="assets/images/IMG_0678.JPG" width="35px" class="rounded-circle" />
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-3">
+                    <div class="kpi-card border">
+                        <h6>Unresolved</h6>
+                        <h2>60</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="kpi-card border">
+                        <h6>Overdue</h6>
+                        <h2>16</h2>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="kpi-card border">
+                        <h6>Open</h6>
+                        <h2>43</h2>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="kpi-card border">
+                        <h6>On Hold</h6>
+                        <h2>64</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trends + Stats -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-md-12">
+                    <div class="card-section" style="height: 330px;">
+                        <div class="row h-100">
+
+                            
+                            <div class="col-md-9 d-flex flex-column">
+                                <h6>Today's Trends</h6>
+                                <p class="text-muted small">as of 25 May 2019, 09:41 PM</p>
+
+                                <div id="chart" class="h-100 rounded">
+                                    <img src="assets/images/full graph.png" class="img-fluid w-100 h-100"
+                                        alt="Today's trends chart">
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-md-3 stats">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Resolved</span>
+                                    <strong>449</strong>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Received</span>
+                                    <strong>426</strong>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Average first response time</span>
+                                    <strong>33m</strong>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Average response time</span>
+                                    <strong>3h 8m</strong>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Resolution within SLA</span>
+                                    <strong>94%</strong>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tickets & Tasks -->
+            <div class="row g-4">
+                <!-- Unresolved Tickets -->
+                <div class="col-md-8">
+                    <div class="card-section">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h6>Unresolved Tickets</h6>
+                            <a href="#" class="text-primary small">View details</a>
+                        </div>
+                        <p>Group: <strong>Support</strong></p>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Waiting on Feature Request</span>
+                            <strong>4238</strong>
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Awaiting Customer Response</span>
+                            <strong>1005</strong>
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Awaiting Developer Fix</span>
+                            <strong>914</strong>
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Pending</span>
+                            <strong>281</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tasks -->
+                <div class="col-md-4">
+                    <div class="card-section">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h6>Tasks</h6>
+                            <a href="#" class="text-primary small">View all</a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Create new +
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new task</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <fieldset>
+                                                <div class="mb-3">
+                                                    <label for="disabledTextInput" class="form-label">
+                                                        Enter task name
+                                                    </label>
+                                                    <input type="text" id="disabledTextInput" class="form-control"
+                                                        placeholder="Task">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="disabledSelect" class="form-label">
+                                                        Due date
+                                                    </label>
+                                                    <select id="disabledSelect" class="form-select">
+                                                        <option>Tommorow</option>
+                                                        <option>Next week</option>
+                                                        <option>Next month</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="disabledFieldsetCheck">
+                                                        <label class="form-check-label" for="disabledFieldsetCheck">
+                                                            Urgent
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-item d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label>Finish ticket update</label>
+                            </div>
+
+                            <span class="badge bg-warning">Urgent</span>
+                        </div>
+
+                        <div class="task-item d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label>Create new ticket example</label>
+                            </div>
+
+                            <span class="badge bg-success">New</span>
+                        </div>
+
+                        <div class="task-item d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label>Update ticket report</label>
+                            </div>
+
+                            <span class="badge bg-secondary">Default</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
